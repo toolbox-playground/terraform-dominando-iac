@@ -4,7 +4,8 @@
 Garantir que consigamos instalar e configurar corretamente o Terraform no ambiente local.  
 
 ### Passos
-1.	Instale o Terraform:  
+
+#### 1.	Instale o Terraform:  
 Siga a documentação oficial para instalar o Terraform no seu sistema operacional.  
 
 Confirme a instalação executando:  
@@ -12,7 +13,7 @@ Confirme a instalação executando:
 terraform version
 ```
 
-2. Configure um Provider
+#### 2. Configure um Provider
 Crie um arquivo **provider.tf** e defina o provedor da AWS
 Exemplo de configuração:
 ```hcl
@@ -26,8 +27,11 @@ Valide a configuração com:
 terraform validate
 ```
 
-3. Execute o Terraform INIT:  
-- Rode terraform init para inicializar o ambiente.  
+#### 3. Execute o Terraform INIT:  
+Rode 
+  
+```bash
+terraform init
+```
 
-
-
+para inicializar o ambiente.  
