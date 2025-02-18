@@ -1,6 +1,6 @@
 # Módulo 04 - Terraform Core Workflow
 
-## Dependências implícitas - Exemplo completo
+## Dependências Implícitas - Exemplo completo
 
 ```yaml
 # Implícita: EC2 depende da VPC e Subnet
