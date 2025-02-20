@@ -29,5 +29,5 @@ terraform plan
 terraform apply
 ```
 
-3. Verifique a Infraestrutura:  
+3. Verifique a Infraestrutura:
 - Confirme se o recurso foi criado usando a interface web do provedor ou o CLI (exemplo: aws s3 ls).  

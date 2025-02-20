@@ -1,4 +1,4 @@
-# 02_01 - Exercício Instalando e Configurando o Terraform
+# 02_01 - Configurando o Terraform
 
 ## Objetivo
 Garantir que consigamos instalar e configurar corretamente o Terraform no ambiente local.  
