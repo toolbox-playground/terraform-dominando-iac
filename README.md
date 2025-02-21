@@ -1,4 +1,4 @@
-![Terraform](imgs/logo_curso.jog "Terraform - Dominanco IAC")
+![Terraform](imgs/logo_curso.jpg "Terraform - Dominanco IAC")
 
 # Terraform - Dominando Infraestrutura como Código
 
