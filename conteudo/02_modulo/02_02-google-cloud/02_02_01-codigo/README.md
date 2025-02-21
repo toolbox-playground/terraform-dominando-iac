@@ -10,21 +10,6 @@ Neste repositório, temos exemplos básicos de execução de terraform com base 
 Seguir passo a passo da instalação do [Terraform](https://developer.hashicorp.com/terraform/tutorials/gcp-get-started/install-cli).
 Seguir passo a passo da instalação do [gcloud sdk](https://cloud.google.com/sdk/docs/install).
 
-### Estrutura do repositório
-```
-|__.github                          # Pasta com os arquivos de CI/CD para o GitHub Actions
-|__exercicios                       # Exercícios 
-|  |__1-... 
-|  |  |__main.tf                    # Arquivo principal para execução do terraform
-|  |__2-...                          
-|__modulos                          # Módulos para execução de infra estrutura
-|__CHANGELOG.md                     # Arquivo de controle de changes do repositório
-|__CONTRIBUTINT.md                  # Arquivo com diretrizes de contribuição
-|__package.json                     # Arquivo necessário para geração de versionamento automático
-|__README.md                        # Você está lendo esse arquivo
-|__.versionrc                       # Arquivo necessário para configuração de versionamento
-```
-
 ### Como executar os exercícios
 
 - É muito importante conhecer os comandos básicos de terraform. 
