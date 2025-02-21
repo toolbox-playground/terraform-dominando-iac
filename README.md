@@ -1,3 +1,5 @@
+![Terraform](imgs/logo_curso.jog "Terraform - Dominanco IAC")
+
 # Terraform - Dominando Infraestrutura como Código
 
 Bem-vindo ao repositório oficial do curso de Terraform da Toolbox, onde transformamos o aprendizado em prática real!  
