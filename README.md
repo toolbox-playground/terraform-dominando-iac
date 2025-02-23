@@ -1,3 +1,5 @@
+![Terraform](imgs/logo_curso.jpg "Terraform - Dominanco IAC")
+
 # Terraform - Dominando Infraestrutura como Código
 
 Bem-vindo ao repositório oficial do curso de Terraform da Toolbox, onde transformamos o aprendizado em prática real!  
@@ -8,8 +10,18 @@ Este treinamento intensivo, com cerca de 30 horas divididas em 5 encontros ao vi
 A combinação de teoria e prática vai prepará-lo para os desafios do dia a dia, tornando o aprendizado envolvente e aplicável.
 
 # Ementa do Curso
-Neste curso, você aprenderá:
-X
+Neste curso, você aprenderá:  
+- Módulo 1 - Nivelamento  
+- Módulo 2 - Introdução ao Terraform  
+- Módulo 3 - Terraform Core Workflow  
+- Módulo 4 - Terraform Core Workflow P2  
+- Módulo 5 - HCL  
+- Módulo 6 - Providers  
+- Módulo 7 - States  
+- Módulo 8 - Trabalhando com diferentes environments  
+- Módulo 9 - HCL Avançado  
+- Módulo 10 - Módulos  
+- Módulo 11 - GitLab CI/CD  
 
 # Dinâmica das aulas
 **- Turmas Exclusivas:** Ambiente focado e interação direta com nossos especialistas.  
