@@ -1,6 +1,7 @@
 # Local .terraform directories
 **/.terraform/*
 **/gcp.json
+aws.env
 .terraform
 *.*.lock*
 

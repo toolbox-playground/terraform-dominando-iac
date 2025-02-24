@@ -9,20 +9,6 @@ Neste repositório, temos exemplos básicos de execução de terraform com base 
 ### Pré Requisito
 Seguir passo a passo da instalação do [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli).
 
-### Estrutura do repositório
-```
-|__.github                          # Pasta com os arquivos de CI/CD para o GitHub Actions
-|__exercicios                       # Exercícios 
-|  |__1-... 
-|  |  |__main.tf                    # Arquivo principal para execução do terraform
-|  |__2-...                          
-|__modulos                          # Módulos para execução de infra estrutura
-|__CHANGELOG.md                     # Arquivo de controle de changes do repositório
-|__CONTRIBUTINT.md                  # Arquivo com diretrizes de contribuição
-|__package.json                     # Arquivo necessário para geração de versionamento automático
-|__README.md                        # Você está lendo esse arquivo
-|__.versionrc                       # Arquivo necessário para configuração de versionamento
-```
 
 ### Como executar os exercícios
 
@@ -30,6 +16,13 @@ Seguir passo a passo da instalação do [Terraform](https://developer.hashicorp.
 - Dentro de cada `main.tf`, alterar os placeholder como: `<ALGUMA_COISA_ESCRITA>`
 - Criar três variáveis de ambiente e adicionar o conteúdo do da chave criado no console da AWS
 - Execute a pré configuração do ambiente:\
+
+*Para Windows com powershell*
+```
+$env:AWS_ACCESS_KEY_ID = ""
+$env:AWS_SECRET_ACCESS_KEY = ""
+terraform init; terraform plan; 
+```
 
 *Para Linux*
 ```
@@ -42,24 +35,3 @@ terraform init && terraform plan
 
 Em casos de dúvidas, siga o passo-a-passo [aqui](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#authentication-and-configuration).
 
-### Pastar de exercícios
-
-*1 - Variaveis estáticas*\
-Aqui encontraremos um cenário simples, onde todos os parametros já estarão no arquivo main.tf.\
-*2 - Variaveis dinâmicas*\
-Aqui encontraremos um cenário onde passaremos os dados através de um arquivo ou por command-line.\
-*3 - Depends On* WIP \ 
-Aqui encontraremos um cenário onde a criação do recurso depende da criação de outro recurso.\
-*4 - Deletando Recurso* WIP \
-Aqui, removeremos um projeto do arquivo main.tf.\
-*5 - Limpando todos recursos* WIP \
-Aqui usaremos o destroy para eliminar nossa infra.\
-
-## Contribuindo
-Contribuições são bem-vindas! Por favor, leia o arquivo [CONTRIBUTING.md](CONTRIBUTING.md) para mais detalhes.
-
-## Licença
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE.md](LICENSE.md) para mais detalhes.
-
-### Controle de versão
-Para control de versão automático usamos a lib [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version)
