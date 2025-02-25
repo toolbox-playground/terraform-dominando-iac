@@ -1,11 +1,11 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "us-west-2"
 }
 
 # Criando uma instância EC2
 resource "aws_instance" "web" {
-  ami           = "ami-0c55b159cbfafe1f0"  # Altere para uma AMI válida na sua região
-  instance_type = "t2.micro"
+  ami           = "ami-0cf2b4e024cdb6960"  # Altere para uma AMI válida na sua região
+  instance_type = "t3.micro"
 
   tags = {
     Name = "WebServer"
@@ -14,7 +14,7 @@ resource "aws_instance" "web" {
 
 # Criando um bucket S3 para armazenar logs da EC2
 resource "aws_s3_bucket" "log_bucket" {
-  bucket = "my-explicit-dependency-bucket-123"
+  bucket = "shubirubas3tttt"
 
   tags = {
     Name = "LogBucket"

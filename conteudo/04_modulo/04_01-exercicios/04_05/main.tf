@@ -25,8 +25,9 @@ resource "aws_subnet" "public_subnet" {
 # Criando uma instância EC2 dentro da sub-rede pública
 resource "aws_instance" "web" {
   ami           = "ami-0c55b159cbfafe1f0"  # Altere para uma AMI válida na sua região
-  instance_type = "t2.micro"
-  subnet_id     = aws_subnet.public_subnet.id  # Dependência implícita!
+  instance_type = "t3.micro"
+  #subnet_id     = aws_subnet.public_subnet.id  # Dependência implícita!
+  subnet_id     = "shubs"
 
   tags = {
     Name = "WebServer"

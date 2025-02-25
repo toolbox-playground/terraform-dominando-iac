@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "us-west-2"
 }
 
 # Criando uma VPC
@@ -13,7 +13,7 @@ resource "aws_vpc" "main" {
 
 # Criando uma instância EC2
 resource "aws_instance" "web" {
-  ami             = "ami-0c55b159cbfafe1f0"  # Altere para uma AMI válida na sua região
+  ami             = "ami-0cf2b4e024cdb6960"  # Altere para uma AMI válida na sua região
   instance_type   = "t2.micro"
 
   tags = {
@@ -23,7 +23,7 @@ resource "aws_instance" "web" {
 
 # Criando um bucket S3
 resource "aws_s3_bucket" "my_bucket" {
-  bucket = "my-terraform-bucket-123456789" # Escolha um nome único
+  bucket = "shubsttttttsuper" # Escolha um nome único
 
   tags = {
     Name = "MyBucket"

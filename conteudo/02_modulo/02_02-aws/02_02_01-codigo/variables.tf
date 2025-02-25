@@ -1,4 +1,4 @@
-variable "AWS_REGION" {
+variable "AWS_REGION_SHUBS" {
   default       = "us-west-2"
 }
 variable "AMIS" {
