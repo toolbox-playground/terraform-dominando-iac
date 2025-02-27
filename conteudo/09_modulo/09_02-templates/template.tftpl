@@ -1,0 +1,14 @@
+bucket = "${bucket_name}"
+
+tags = {
+  Name        = "${bucket_name}"
+  Environment = "${environment}"
+}
+
+%{ if enable_versioning }
+versioning  = "Enabled"
+Name        = "${bucket_name}-Version"
+%{ else }
+versioning = "Disabled"
+Name        = "${bucket_name}-Normal"
+%{ endif }
