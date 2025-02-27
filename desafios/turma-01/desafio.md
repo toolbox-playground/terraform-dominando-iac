@@ -26,10 +26,14 @@ Sua tarefa é projetar e implantar uma aplicação web altamente disponível na 
 - Implantar um banco de dados Amazon RDS (PostgreSQL ou MySQL) em uma subnet privada;  
 - Habilitar a configuração Multi-AZ para alta disponibilidade.
 
-#### 3. Segurança e Monitoramento
+#### 5. Segurança e Monitoramento
 - Implementar Security Groups e Network ACLs para restringir acessos desnecessários;  
 - Habilitar CloudWatch para monitoramento das instâncias EC2;  
 - Configurar IAM Roles e Policies seguindo o princípio de menor privilégio.
+
+#### 6. Pipeline
+- Implementar pipeline com pelo menos dois stages (PLAN, APPLY)  
+- Adicionar alguma ferramenta de validação de código  
 
 ## Tarefas Bônus 🎯
 
