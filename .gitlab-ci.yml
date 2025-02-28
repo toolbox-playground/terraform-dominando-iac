@@ -1,0 +1,56 @@
+stages:
+  - plan
+  - security_check
+  - apply
+
+variables:
+  TF_VERSION: "1.5.0"
+  AWS_REGION: "us-west-2"
+
+cache:
+  key: terraform
+  paths:
+    - .terraform
+
+terraform-plan:
+  stage: plan
+  image: alpine:latest
+  script:
+    - apk update
+    - apk add --no-cache curl unzip
+    - curl -sLO https://releases.hashicorp.com/terraform/1.5.0/terraform_1.5.0_linux_amd64.zip
+    - unzip terraform_1.5.0_linux_amd64.zip
+    - mv terraform /usr/local/bin/
+    - terraform version
+    - terraform init
+    - terraform fmt -check -diff || echo "Formatação incorreta! Execute 'terraform fmt' para corrigir."
+    - terraform validate -no-color || echo "Erro na validação! Corrija antes de continuar."
+    - terraform plan -out=tfplan
+  artifacts:
+    paths:
+      - tfplan
+    expire_in: 1 day
+
+terraform-checkov:
+  stage: security_check
+  image: python:3.9
+  needs: ["terraform-plan"]
+  before_script:
+    - pip install checkov
+  script:
+    - checkov -d . --quiet --compact || echo "Erros de segurança encontrados! Corrija antes de continuar."
+
+terraform-apply:
+  stage: apply
+  image: alpine:latest  # ✅ Use Alpine, which includes a shell
+  needs: ["terraform-plan", "terraform-checkov"]
+  when: manual  # ⬅️ Requires manual approval before running
+  script:
+    - apk update
+    - apk add --no-cache curl unzip
+    - curl -sLO https://releases.hashicorp.com/terraform/1.5.0/terraform_1.5.0_linux_amd64.zip
+    - unzip terraform_1.5.0_linux_amd64.zip
+    - mv terraform /usr/local/bin/
+    - terraform version
+    - terraform init
+    - terraform apply -auto-approve tfplan
